@@ -1,0 +1,28 @@
+{
+  "name": "cab-vooi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zerodev/cab": "^0.0.30",
+    "@zerodev/multi-chain-validator": "^5.3.11",
+    "@zerodev/permissions": "^5.4.7",
+    "@zerodev/remote-signer": "^5.2.4",
+    "@zerodev/sdk": "^5.3.14",
+    "@zerodev/webauthn-key": "^5.3.3",
+    "dotenv": "^16.4.5",
+    "permissionless": ">=0.1.44 <=0.1.45",
+    "ts-node": "^10.9.2",
+    "viem": ">=2.16.3 <2.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.3",
+    "tslib": "^2.7.0"
+  }
+}
