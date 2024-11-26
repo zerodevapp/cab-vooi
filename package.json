@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@zerodev/cab": "^0.0.30",
+    "@zerodev/cab": "^0.0.31",
     "@zerodev/multi-chain-validator": "^5.3.11",
     "@zerodev/permissions": "^5.4.7",
     "@zerodev/remote-signer": "^5.2.4",

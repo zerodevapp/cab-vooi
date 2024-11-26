@@ -93,7 +93,7 @@ const main = async () => {
     await waitForUserInput()
     const cabBalance = await cabClient.getCabBalance({
       address: cabClient.account.address,
-      token: 'USDC',
+      token: ['USDC', 'USDT'],
     })
     console.log("CAB balance:", cabBalance)
     if (cabBalance > 0) {
@@ -101,12 +101,21 @@ const main = async () => {
     }
   }
 
-  const repayTokens = ['USDC']
+  const repayTokens = ['USDC', 'USDT']
 
   // transfer 0.001 USDC to itself
   const calls = [
     {
       to: supportedTokens["USDC"][chain.id].token,
+      data: encodeFunctionData({
+        abi: erc20Abi,
+        functionName: "transfer",
+        args: [cabClient.account.address, parseUnits("0.001", 18)],
+      }),
+      value: BigInt(0)
+    },
+    {
+      to: supportedTokens["USDT"][chain.id].token,
       data: encodeFunctionData({
         abi: erc20Abi,
         functionName: "transfer",
